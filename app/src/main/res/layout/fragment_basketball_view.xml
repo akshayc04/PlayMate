@@ -1,0 +1,51 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.achougulsyr.playmate.Basketball_view">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bballback"
+            android:scaleType="centerCrop"
+            android:alpha="0.6"/>
+
+    <ImageButton
+        android:id="@+id/bas_btn1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bas1" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:text="2"
+            android:fontFamily="casual"
+            android:textSize="30sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/bword"
+            android:alpha="0.6"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+</FrameLayout>

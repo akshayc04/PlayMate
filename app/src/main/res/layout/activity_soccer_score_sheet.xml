@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/soccerfield"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/team_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team A"
+        android:textStyle="bold"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:id="@+id/score_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/team_a"
+        android:text="Score"
+        android:textStyle="bold"
+        android:layout_marginLeft="53dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:id="@+id/score_num_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/score_a"
+        android:text="0"
+        android:layout_marginLeft="58dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textSize="60dp"
+        android:textColor="#FFFFFF"/>
+
+
+    <TextView
+        android:id="@+id/team_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team B"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="45dp"
+        android:layout_alignParentRight="true"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:id="@+id/score_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/team_b"
+        android:text="Score"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="53dp"
+        android:layout_alignParentRight="true"
+        android:textColor="#FFFFFF"/>
+
+
+    <TextView
+        android:id="@+id/score_num_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/score_b"
+        android:text="0"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="58dp"
+        android:textSize="60dp"
+        android:layout_alignParentRight="true"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        android:id="@+id/btn_a_goal"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/score_num_a"
+        android:background="@drawable/soccer_btn_shape"
+        android:layout_marginLeft="20dp"
+        android:text="Goal!!"
+        android:textSize="20sp"
+        android:layout_marginTop="25dp"
+        android:onClick="three_a"/>
+
+
+    <Button
+        android:id="@+id/btn_b_goal"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/score_num_b"
+        android:background="@drawable/soccer_btn_shape"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:text="Goal!!"
+        android:textSize="20sp"
+        android:layout_marginTop="25dp"
+        android:onClick="three_b"/>
+
+
+    <Button
+        android:id="@+id/btn_a_strt"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chrono"
+        android:background="@drawable/soccer_btn_shape"
+        android:layout_marginLeft="20dp"
+        android:text="Start"
+        android:textSize="20sp"
+        android:onClick="start"
+        android:layout_marginTop="10dp" />
+
+
+    <Button
+        android:id="@+id/btn_a_stats"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_a_strt"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/soccer_btn_shape"
+        android:text="GAME STATS"
+        android:layout_marginTop="15dp" />
+
+
+    <Button
+        android:id="@+id/btn_b_pause"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chrono"
+        android:background="@drawable/soccer_btn_shape"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:text="PAUSE"
+        android:onClick="stop"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp" />
+
+
+    <Button
+        android:id="@+id/btn_gameover"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/soccer_btn_shape"
+        android:layout_marginBottom="12dp"
+        android:text="Game over !"
+        android:onClick="finish"/>
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/soccer_btn_shape"
+        android:text="Reset"
+        android:onClick="reset"/>
+
+    <Chronometer
+        android:id="@+id/chrono"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:textSize="40sp"
+        android:layout_below="@+id/btn_a_goal"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"/>
+
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF">
+
+    </View>
+
+</RelativeLayout>
